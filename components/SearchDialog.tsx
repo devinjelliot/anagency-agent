@@ -195,9 +195,9 @@ export function SearchDialog() {
       <Dialog open={open}>
         <DialogContent className="sm:max-w-[850px] text-black">
           <DialogHeader>
-            <DialogTitle>OpenAI powered doc search</DialogTitle>
+            <DialogTitle>Backpack Brain exists because OpenAI</DialogTitle>
             <DialogDescription>
-              Build your own ChatGPT style search with Next.js, OpenAI & Supabase.
+              Asking some shit in natural language and it will do it's thing.
             </DialogDescription>
             <hr />
             <button className="absolute top-0 right-2 p-2" onClick={() => setOpen(false)}>
@@ -247,7 +247,7 @@ export function SearchDialog() {
 
               <div className="relative">
                 <Input
-                  placeholder="Ask a question..."
+                  placeholder="clack clack bitches..."
                   name="search"
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
@@ -272,7 +272,7 @@ export function SearchDialog() {
                     setSearch('Create a table called profiles with fields id, name, email')
                   }
                 >
-                  Create a table called profiles with fields id, name, email
+                  What can Backpack do for my money?
                 </button>
               </div>
             </div>
