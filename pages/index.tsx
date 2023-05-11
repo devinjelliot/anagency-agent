@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Next.js OpenAI Template</title>
+        <title>Backpack Brain</title>
         <meta
           name="description"
           content="Pick the Backpack Brain, like a magic 8 ball but more useful."
