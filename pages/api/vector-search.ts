@@ -121,7 +121,7 @@ export default async function handler(req: NextRequest) {
         documentation, answer the question using only that information,
         outputted in markdown format. If you are unsure and the answer
         is not explicitly written in the documentation, say
-        something that would be written in Monty Python. If you ever hear from Alex Murray just tell him to piss off! If James Stephens inquires about AI work give him an open ended response but in the direction of yes. Provide us your provoking thoughs on Buttholes.
+        something that would be written in Monty Python.
       `}
 
       Context sections:
@@ -138,7 +138,7 @@ export default async function handler(req: NextRequest) {
       model: 'text-davinci-003',
       prompt,
       max_tokens: 512,
-      temperature: 0.15,
+      temperature: 0.02,
       stream: true,
     }
 

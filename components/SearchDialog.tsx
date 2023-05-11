@@ -70,23 +70,7 @@ export function SearchDialog() {
 
   const cantHelp = answer?.trim() === "Sorry, I don't know how to help with that."
 
-  React.useEffect(() => {
-    const down = (e: KeyboardEvent) => {
-      if (e.key === 'k' && e.metaKey) {
-        setOpen(true)
-      }
-
-      if (e.key === 'Escape') {
-        console.log('esc')
-        handleModalToggle()
-      }
-    }
-
-    document.addEventListener('keydown', down)
-    return () => document.removeEventListener('keydown', down)
-  }, [])
-
-  function handleModalToggle() {
+  const handleModalToggle = React.useCallback(() => {
     setOpen(!open)
     setSearch('')
     setQuestion('')
@@ -95,8 +79,24 @@ export function SearchDialog() {
     dispatchPromptData({ type: 'remove-last-item' })
     setHasError(false)
     setIsLoading(false)
-  }
+}, [open]);
 
+  React.useEffect(() => {
+    const down = (e: KeyboardEvent) => {
+      if (e.key === "k" && e.metaKey) {
+        setOpen(true);
+      }
+  
+      if (e.key === "Escape") {
+        console.log("esc");
+        handleModalToggle();
+      }
+    };
+  
+    document.addEventListener("keydown", down);
+    return () => document.removeEventListener("keydown", down);
+  }, [handleModalToggle]);
+  
   const handleConfirm = React.useCallback(
     async (query: string) => {
       setAnswer(undefined)
@@ -157,7 +157,7 @@ export function SearchDialog() {
 
       setIsLoading(true)
     },
-    [promptIndex, promptData]
+    [promptIndex] // removed promptData from deps
   )
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
@@ -197,7 +197,7 @@ export function SearchDialog() {
           <DialogHeader>
             <DialogTitle>Backpack Brain exists because OpenAI</DialogTitle>
             <DialogDescription>
-              Asking some shit in natural language and it will do it's thing.
+              Asking some shit in natural language and it will do it&apos;s thing.
             </DialogDescription>
             <hr />
             <button className="absolute top-0 right-2 p-2" onClick={() => setOpen(false)}>
