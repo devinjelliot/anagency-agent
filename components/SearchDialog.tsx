@@ -195,9 +195,9 @@ export function SearchDialog() {
       <Dialog open={open}>
         <DialogContent className="sm:max-w-[850px] text-black">
           <DialogHeader>
-            <DialogTitle>Backpack Brain exists because OpenAI</DialogTitle>
+            <DialogTitle>Backpack Brain</DialogTitle>
             <DialogDescription>
-              Asking some shit in natural language and it will do it&apos;s thing.
+              Learn what Backpack can do for your money, in your own words.
             </DialogDescription>
             <hr />
             <button className="absolute top-0 right-2 p-2" onClick={() => setOpen(false)}>
@@ -240,14 +240,14 @@ export function SearchDialog() {
                   <span className="bg-green-500 p-2 w-8 h-8 rounded-full text-center flex items-center justify-center">
                     <Wand width={18} className="text-white" />
                   </span>
-                  <h3 className="font-semibold">Answer:</h3>
+                  <h3 className="font-semibold">Perspective:</h3>
                   {answer}
                 </div>
               ) : null}
 
               <div className="relative">
                 <Input
-                  placeholder="clack clack bitches..."
+                  placeholder="clack clack..."
                   name="search"
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
@@ -269,10 +269,10 @@ export function SearchDialog() {
                   rounded border border-slate-200 dark:border-slate-600
                   transition-colors"
                   onClick={(_) =>
-                    setSearch('Create a table called profiles with fields id, name, email')
+                    setSearch('Can I off-ramp my USDC back to USD, or will I be stuck in crypto?')
                   }
                 >
-                  What can Backpack do for my money?
+                  What can I do with Backpack?
                 </button>
               </div>
             </div>

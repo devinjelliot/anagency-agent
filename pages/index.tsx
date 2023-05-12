@@ -14,10 +14,10 @@ export default function Home() {
         <title>Backpack Brain</title>
         <meta
           name="description"
-          content="Pick the Backpack Brain, like a magic 8 ball but more useful."
+          content="Understand Backpack in your own words. Search for any Backpack concept and get a simple explanation."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/not-holo.svg" />
       </Head>
       <main className={styles.main}>
         <div className={styles.center}>
@@ -28,7 +28,7 @@ export default function Home() {
           <div className="opacity-75 transition hover:opacity-100 cursor-pointer">
             <Link href="https://mybackpack.app" className="flex items-center justify-center">
               <p className="text-base mr-2">Built by An Agency</p>
-              <Image src={'/supabase.svg'} width="20" height="20" alt="Supabase logo" />
+              <Image src={'/not-holo.svg'} width="20" height="20" alt="An Agency Logo" />
             </Link>
           </div>
           <div className="border-l border-gray-300 w-1 h-4" />
