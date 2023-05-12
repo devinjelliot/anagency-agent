@@ -1,0 +1,74 @@
+## Backpack Domain Model (Preface)
+
+The following document outlines the UX goals and considerations of the Backpack project, providing insights into the design and functionality of the application. It presents a domain model that organizes various features such as Persona Wallets, Asset Rooms, Record Rooms, and Plugin Rooms.
+
+Please note that this document represents the initial design stage and may not fully align with the final implementation of the Backpack app. It serves as a reference for understanding the project's goals and providing context for future inquiries.
+
+## Backpack Domain Model
+
+### Persona Wallet
+
+- Following the initial onboarding, this is the default view when the app launches.
+- Users can see their total liquid balance of the wallet.
+- Users can see their persona avatar.
+- Users can tap on the record room.
+- Users can tap on the asset room.
+- Users can tap on the plugin room.
+- A user can have as many of these wallet accounts as they want.
+- New personas are created in settings.
+- Each persona is set as a tab menu item.
+- When a user onboards, they are initially set up with 2 wallets by default: Spend | Save.
+- They are called persona wallets because each type is designed to reflect the types of services and behaviors that are typical of such a persona.
+    - For example, as a spender, I would use a debit card enabled by the card plugin, which offers rewards to improve my cost basis for purchases.
+- Context Buttons:
+    - These buttons are dynamic with the view context.
+    - There are 4 context buttons.
+    - These buttons are mapped to plugins in the default view.
+    - Plugins and button mapping are managed in the plugin room.
+
+### Asset Room
+
+- When the asset room is opened, the asset drawer is opened.
+- The asset room displays field guide text on the first time through and the persona avatar all other times.
+- Displays the connected address.
+- Displays the connected address ENS wallet address value.
+- Displays the current balance of all assets for the address in USDC.
+- Asset Drawer:
+    - The asset drawer holds a list of all fungible and non-fungible tokens compatible with the wallet technology.
+    - The default asset will be USDC.
+    - By default, a subset of tokens will be visible to the user.
+    - Users can select an asset.
+- Context Buttons:
+    - Users can modify the list by adding and removing assets.
+    - Users can add custom contract addresses to bring in assets they're specifically aware of.
+    - Users can view the transaction history of a selected asset.
+    - Users can transfer a selected asset.
+    - Users can on-ramp a selected asset.
+    - Users can cancel to exit the asset room and return to the default persona wallet.
+
+### Record Room
+
+- When the record room is opened, the record drawer is opened.
+- Records are containers for sets of user data, such as KYC.
+- Records are created when users complete the workflow for each record type.
+- Record Drawer:
+    - The record drawer holds a list of all available records.
+    - Users can select from records in the list.
+    - Records provide an estimated amount of time they take to complete.
+- Context Buttons:
+    - Users can create a selected record if it has not been created yet.
+    - Users can modify a selected record if it has already been created.
+    - Users can delete a selected record if it has already been created.
+    - Users can view a selected record if it has already been created.
+    - Users can cancel to exit the record room and return to the default persona wallet.
+
+### Plugin Room
+
+- When the plugin room is opened, the plugin drawer is opened.
+- Users can tap on the plugin layout button to map context buttons to user-selected plugins.
+- Users can tap on the plugin store to open the community-built plugin store list.
+- Plugin Drawer:
+    - The plugin drawer holds a list of plugins.
+    - The default list is the installed list.
+        - If layout is selected, the list will be the active plugin list.
+        - If the plugin store is selected, the list will be open to the community list, and an additional search field will be extended from the
