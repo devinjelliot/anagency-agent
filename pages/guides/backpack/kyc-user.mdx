@@ -1,0 +1,32 @@
+KYC Data Modell:
+Prime Trust API: https://documentation.primetrust.com/
+KYC Complete Model (some fields optional)
+-   Name 
+-   Email
+-   Phone Number
+-   Date of Birth
+-   Tax-Country (US)
+-   Tax State (US)
+-   SSN (tax-id)
+-   IP address (optional, IPv4 decimal or IPv6 hexadecimal format)
+-   Geolocation (optional, ISO 6709 format)
+-   Primary Address:
+-   Street 1
+-   Street 2
+-   Country (US)
+-   City
+-   State
+-   Postal Code
+
+ **KYC Document check process**
+1.  Upload a Photo ID to the contact and collect the following information about the ID:
+-   Type of ID - `kyc-document-type`
+-   Drivers License - front and back required (preferred for US end users)
+-   Government ID - front and back required
+-   Passport - preferred for international end users
+-   Residence Permit
+-   Issuing Country - this should be the same as the tax-country so in this case it will be US) (`kyc-document-country`)
+2.  If the following three checks clear, then the account will automatically open: 
+-   KYC Document Check for a document with `identity` and `identity-photo` set to `true`.
+-   CIP Check 
+-   AML Check

@@ -1,0 +1,199 @@
+# Fintech Data Models
+
+We're building a new type of crypto wallet. Each of the following data models will need to be included into specific functions where each function is a to a user just another way to specifically work with money. The UX needs to accommodate a potentially large number similar seeming functions. The design challenge is therefore to manage this nuanced complexity in such a way for the user to find the experience enjoyable.
+
+## Can you output data models?
+Yes, the GPT3 can output data models that can be used to create a mobile UX. However, it is important to note that the quality of the data model will depend on the quality of the input data. If you have a limited amount of data, or if your data is of poor quality, then the data model that is produced will also suffer from poor quality.
+
+## What is the data model for a US domestic banking wire transfer?
+The data model for a US domestic banking wire transfer includes the following fields:
+- Sender's name
+- Sender's bank routing number
+- Sender's account number
+- Recipient's name
+- Recipient's bank routing number
+- Recipient's account number
+- Amount to be transferred
+- Wire transfer
+
+## What is the data model for a user to enter their credit card info manually?
+The data model for a user to enter their credit card info would include the following fields:
+- Name on card
+- Card number
+- Expiration date
+- CVV code
+- Billing address
+  
+## What is the data model for an ACH transfer?
+The data model for an ACH transfer would include the following fields:
+- Account holder's name
+- Account holder's bank routing number
+- Account holder's account number
+- Recipient's name
+- Recipient's bank routing number
+- Recipient's account number
+- Amount to be transferred
+ 
+## What is the data model for a fiat to crypto OTC purchase?
+The data model for a fiat to crypto OTC purchase would include the following fields:
+- Buyer's name
+- Buyer's bank account number
+- Seller's name
+- Seller's cryptocurrency wallet address
+- Fiat currency amount being purchased
+- Cryptocurrency amount being purchased  
+
+## What is the data model for a crypto to fiat OTC purchase? 
+The data model for a crypto to fiat OTC purchase would include the following fields:
+- Buyer's name
+- Buyer's cryptocurrency wallet address
+- Seller's name
+- Seller's bank account number
+- Fiat currency amount being purchased
+- Cryptocurrency amount being purchased 
+
+## What is the data model for Apple tap to pay? 
+The data model for Apple tap to pay includes the following fields:
+- Cardholder's name
+- Credit or debit card number
+- Expiration date
+- Security code
+- Billing address
+- Shipping address (optional)
+- Phone number
+- Email address
+- Touch ID or passcode
+
+## What is the data model for a user to sign up for a new account?
+The data model for a user to sign up for a new account would include the following fields:
+- Username
+- Password
+- Email address
+- First name
+- Last name
+- Date of birth
+- Gender
+- Country
+- Postal code 
+
+## What is the data model for a defi to defi crypto payment in USDC based on ETH? 
+The data model for a defi to defi crypto payment in USDC based on ETH would include the following fields:
+- Sender's wallet address
+- Recipient's wallet address
+- Amount of USDC to be sent
+- Gas fee (in ETH)
+- Nonce
+- Signature
+- Data
+
+## What is the ENS data model? 
+The ENS data model includes the following fields:
+- Name
+- TLD
+- Hash (of the resolve record)
+- Time to live (TTL)
+- Resolver address
+- Owner address
+- Controller address
+- Target address
+
+## What are the steps performed for Stripe's KYC? 
+The steps performed for Stripe's KYC are as follows:
+1. The user creates an account and provides their email address, full legal name, date of birth, physical address, and phone number.
+2. Stripe uses Jumio to verify the user's identity. The user is prompted to take a photo of their government-issued ID and a selfie.
+3. Stripe checks the user's information against sanctions lists, restricted businesses, and its own internal watchlist.
+4. If the user passes KYC, they are able to add a bank account or debit card and can start using Stripe. If the user does not pass KYC, they are not able to use Stripe.  
+
+## Perfect! Can you list the Stripe KYC data model? 
+The Stripe KYC data model includes the following fields:
+- Email address
+- Legal name
+- Date of birth
+- Physical address
+- Phone number
+- Government-issued ID photo
+- Selfie photo
+
+## Can you list the steps in the apple tap to pay process? 
+The steps in the apple tap to pay process are as follows:
+1. The user adds their credit or debit card to Wallet on their iPhone.
+2. The user goes to a participating merchant and selects Apple Pay at checkout.
+3. The user confirms their payment with Face ID, Touch ID, or their passcode.
+4. The user's iPhone uses NFC technology to communicate with the contactless reader.
+5. The transaction is complete and the user receives a confirmation on their iPhone.
+
+## Can you structure a standard receipt data model but replace the receipt fields with the transaction request data model on ETH?
+The data model for a standard receipt but with the transaction request data model on ETH would include the following fields:
+- Sender's wallet address
+- Recipient's wallet address
+- Amount of ETH to be sent
+- Gas fee (in ETH)
+- Nonce
+- Signature
+
+## What is the venmo data model for paying someone? 
+The venmo data model for paying someone includes the following fields:
+- Sender's venmo username
+- Recipient's venmo username
+- Amount of money to be sent
+- Payment method (bank account, debit card, or balance)
+- Description of the payment
+- Date of the payment
+- Status of the payment (pending, completed, or failed)  
+
+## What is the venmo data model for requesting to be paid by someone?  
+The venmo data model for requesting to be paid by someone includes the following fields:
+- Sender's venmo username
+- Recipient's venmo username
+- Amount of money to be requested
+- Payment method (bank account, debit card, or balance)
+- Description of the payment
+- Date of the payment
+- Status of the payment (pending, completed, or failed)
+
+## What is the wallet connect data model?  
+The wallet connect data model includes the following fields:
+- Session ID
+- Connection ID
+- Status
+- Created At
+- Updated At
+- Handshake Topic
+- URL
+- Peer Meta Date
+
+## What are the etherium chain methods?
+The ethereum chain methods are as follows:
+- GetBlockByHash
+- GetBlockByNumber
+- GetTransactionByHash
+- GetTransactionByBlockNumberAndIndex
+- GetTransactionReceipt
+- GetBalance
+- SendRawTransaction
+- Call
+- EstimateGas
+
+## Can you tell me in plain terms what the chain methods are and what are they use for? 
+The ethereum chain methods are a set of functions that allows users to interact with the ethereum blockchain. These functions can be used to retrieve information about transactions, blocks, and balances, as well as to create and send transactions. The chain methods are an essential part of interacting with the ethereum blockchain. 
+
+## what is the eth_sendTransaction use for?
+The eth_sendTransaction function is used to send a transaction on the ethereum blockchain. This function takes as input the sender's address, the recipient's address, the amount of ETH to be sent, and the gas fee. The function will then return the transaction hash.  
+
+## how is that differnt than eth_signTransaction?  
+The eth_signTransaction function is used to sign a transaction on the ethereum blockchain. This function takes as input the sender's address, the recipient's address, the amount of ETH to be sent, and the gas fee. The function will then return the signed transaction. The eth_sendTransaction function is used to send a transaction on the ethereum blockchain. This function takes as input the sender's address, the recipient's address, the amount of ETH to be sent, and the gas fee. The function will then return the transaction hash. The main difference between these two functions is that eth_signTransaction returns a signed transaction, while eth_sendTransaction simply returns the transaction hash 
+
+## what is the eth_sign method do?
+The eth_sign method is used to sign data with the sender's address. This function takes as input the sender's address and the data to be signed. The function will then return the signature
+
+## what is done with the signature or how is it used once it's been returned?
+The signature can be used to verify the data that was signed. The eth_sign function will return a signature that can be used to verify the data that was signed. To verify the signature, the recipient will need to have the sender's public key. The signature can also be used to prove ownership of an address.
+
+## what is the personal_sign method?
+The personal_sign method is used to sign data with the sender's address. This function takes as input the sender's address and the data to be signed. The function will then return the signature. The personal_sign method is similar to the eth_sign method, but it allows for additional data to be included in the signature. This additional data can be used to prove ownership of an address.
+
+## what data is typically added to personal_sign?
+The data that is added to personal_sign typically includes the sender's address and the data to be signed. This additional data can be used to prove ownership of an address.
+
+## What is the additional data?  
+The additional data is the data that is added to personal_sign. This data typically includes the sender's address and the data to be signed. This additional data can be used to prove ownership of an address.

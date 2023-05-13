@@ -1,0 +1,24 @@
+## Introduction
+The Storefront Merchant Portal is a system for managing e-commerce transactions between merchants and customers. The system includes several services and functions that handle various aspects of the transaction process, such as payment processing, customer identification and verification, and order management.
+
+### Services
+-   **Payment Service**: This service handles the processing of payments from customers to merchants. The service includes a payment_processing_api_call function that communicates with a fintech processing backend service to process payments.
+-   **Payment Widget**: This service provides an interface for customers to make payments. The service includes checkout_integration and prime_trust_integration functions that handle the integration with checkout and prime trust services, respectively.
+-   **Merchant KYC Service**: This service handles customer identification and verification. The service includes prime_trust_integration and checkout_integration functions that handle the integration with prime trust and checkout services, respectively.
+
+### Data
+-   **Checkout Request Data Model**: This is a data model that represents the information needed to initiate a checkout process, such as the customer's address and payment information.
+-   **Order Data Model**: This is a data model that represents an order placed by a customer, including information about the customer and the items in the order.
+
+### Functions
+-   **Create New Order**: This function takes as input the checkout request data and creates a new order.
+-   **Generate Transaction History View**: This function takes as input the order data and generates a view of the transaction history, including information about the customer and the merchant.
+
+### Intent
+-   **Receive Order**: The system receives an order from a customer.
+-   **Create Order**: The system creates a new order in response to a customer's request.
+-   **Send Order to Customer**: The system sends the order details to the customer.
+-   **Review Transactions**: The system reviews successfully created orders.
+
+## Conclusion
+The Storefront Merchant Portal is a functional and modular system that handles the key aspects of e-commerce transactions, including payment processing, customer identification and verification, and order management. By modeling the system in this way, it is easy to test, compose, and reuse the functions and services, and to reason about the system in a declarative, data-driven way.
