@@ -1,0 +1,18 @@
+**Entity KYC Process**
+Clearing a non-natural person through PT's KYC process requires more information but in terms of process is similar to clearing the KYC process for an individual.
+
+PT's compliance team requires the following information to clear a non-natural person aka a company.
+
+1.  Name
+2.  Tax-ID
+3.  Tax-Country
+4.  Region of Formation (Region/State in which the company was created)
+5.  Address
+6.  PII Information on all beneficial owners, beneficial entities, authorized persons and associated persons. Request the PT Supplemental Onboarding packet from your sales engineer for more information. Beneficial owners which are natural persons will need to go through the PT KYC process for individuals as listed above and any beneficial entities will need to go through the same KYC process as listed in this section. The original company is required to have at least one associated natural person contact.
+
+Documents Required for a company:
+
+1.  Company documents indicating ownership structure such as bylaws, documents of formation etc.
+2.  Proof of address such as a bank statement or utility bill.
+
+The PII information for beneficial owners, beneficial entities, authorized perons and associated persons can all be passed in a flat structure in the `related-contacts` array as seen below. The original/main company contact will need at least one `related-contact` that is a natural person but other beneficial entities must be passed in without any further `related-contacts`. If beneficial entities' beneficial owners need to be passed in as they are also beneficial owners of the original company then they must be passed in as a `related-contact` of the original/main company.

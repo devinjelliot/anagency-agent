@@ -14,6 +14,9 @@ import { Input } from '@/components/ui/input'
 import { SSE } from 'sse.js'
 import type { CreateCompletionResponse } from 'openai'
 import { X, Loader, User, Frown, CornerDownLeft, Search, Wand } from 'lucide-react'
+import Home from '@/pages'
+import styles from '@/styles/Home.module.css';
+
 
 function promptDataReducer(
   state: any[],
@@ -67,7 +70,7 @@ export function SearchDialog() {
   const [hasError, setHasError] = React.useState(false)
   const [promptIndex, setPromptIndex] = React.useState(0)
   const [promptData, dispatchPromptData] = React.useReducer(promptDataReducer, [])
-
+  
   const cantHelp = answer?.trim() === "Sorry, I don't know how to help with that."
 
   const handleModalToggle = React.useCallback(() => {
@@ -180,7 +183,7 @@ export function SearchDialog() {
       >
         <Search width={15} />
         <span className="border border-l h-5"></span>
-        <span className="inline-block ml-4">Search...</span>
+        <span className="inline-block ml-4">Learn...</span>
         <kbd
           className="absolute right-3 top-2.5
           pointer-events-none inline-flex h-5 select-none items-center gap-1
@@ -193,7 +196,7 @@ export function SearchDialog() {
         </kbd>{' '}
       </button>
       <Dialog open={open}>
-        <DialogContent className="sm:max-w-[850px] text-black">
+        <DialogContent className="sm:max-w-[850px] text-black ${styles.dialogContent}">
           <DialogHeader>
             <DialogTitle>Backpack Brain</DialogTitle>
             <DialogDescription>
@@ -277,7 +280,7 @@ export function SearchDialog() {
               </div>
             </div>
             <DialogFooter>
-              <Button type="submit" className="bg-red-500">
+              <Button type="submit" className={`${styles.footerButton}`}>
                 Ask
               </Button>
             </DialogFooter>

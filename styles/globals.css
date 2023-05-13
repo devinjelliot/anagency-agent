@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 :root {
+  --ualert-color: #ff00c7;
+  --np-color: #F9F8FC;
+  --charyo-color: #1f1f1f;
+  --lavender-color: #97B1FA;
+  
+}
+
+:root {
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono',

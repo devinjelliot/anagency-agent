@@ -1,3 +1,11 @@
+
+
+@keyframes liquid-metal {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -5,6 +13,15 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  background: linear-gradient(270deg, #F9F8FC, #ff00c7, #6c6c6c, #1f1f1f);
+  background-size: 800% 800%;
+  -webkit-animation: liquid-metal 8s ease infinite;
+  -moz-animation: liquid-metal 8s ease infinite;
+  animation: liquid-metal 8s ease infinite;
+}
+
+.dialogContent {
+  background-color: var(--np-color);
 }
 
 .description {
@@ -102,6 +119,11 @@
   position: absolute;
   filter: blur(45px);
   transform: translateZ(0);
+}
+
+.footerButton {
+  background-color: var(--charyo-color);
+
 }
 
 .logo,
