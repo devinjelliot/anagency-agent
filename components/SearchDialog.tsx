@@ -240,10 +240,10 @@ export function SearchDialog() {
 
               {answer && !hasError ? (
                 <div className="flex items-center gap-4 dark:text-white">
-                  <span className="bg-green-500 p-2 w-8 h-8 rounded-full text-center flex items-center justify-center">
+                  <span className="charyo p-2 w-8 h-8 rounded-full text-center flex items-center justify-center">
                     <Wand width={18} className="text-white" />
                   </span>
-                  <h3 className="font-semibold">Perspective:</h3>
+                  <h3 className="font-semibold">Response:</h3>
                   {answer}
                 </div>
               ) : null}

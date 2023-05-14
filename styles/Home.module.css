@@ -1,5 +1,4 @@
 
-
 @keyframes liquid-metal {
   0% {background-position: 0% 50%;}
   50% {background-position: 100% 50%;}
@@ -23,6 +22,7 @@
 .dialogContent {
   background-color: var(--np-color);
 }
+
 
 .description {
   display: inherit;
