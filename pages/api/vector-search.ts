@@ -108,7 +108,7 @@ export default async function handler(req: NextRequest) {
       const encoded = tokenizer.encode(content)
       tokenCount += encoded.text.length
 
-      if (tokenCount >= 1500) {
+      if (tokenCount >= 1200) {
         break
       }
 
@@ -140,7 +140,7 @@ export default async function handler(req: NextRequest) {
       model: 'text-davinci-003',
       prompt,
       max_tokens: 1200,
-      temperature: 0.01,
+      temperature: 0.011,
       stream: true,
     }
 
